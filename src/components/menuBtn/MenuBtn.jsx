@@ -3,8 +3,8 @@ import React,{ useState } from 'react'
 // styles
 import './MenuBtn.scss'
 
-const MenuBtn = () => {
-    const [active, setActive] = useState(false)
+const MenuBtn = ({active, setActive}) => {
+   /*  const [active, setActive] = useState(false) */
     
     const onClickHandler = () => {
         setActive(!active)

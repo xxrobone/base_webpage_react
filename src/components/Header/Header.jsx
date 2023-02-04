@@ -1,4 +1,4 @@
-import React from 'react';
+import React, {useState} from 'react';
 import office from '../../videos/office.mp4'
 
 // styles
@@ -7,7 +7,7 @@ import Nav from '../nav/Nav';
 import NavItem from '../nav/NavItem';
 
 const Header = ({navData, pageData}) => {
- 
+   const [active, setActive] = useState(false)
     return (
         <React.Fragment>
       
@@ -28,7 +28,7 @@ const Header = ({navData, pageData}) => {
                     <source src={office} type="video/mp4" />
              </video>
              
-             <Nav>
+             <Nav active={active} setActive={setActive} >
                 {navData.map(({title, cls, path, id}) => (
                    <NavItem title={title} cls={cls} path={path} key={id} />
                 ))}
@@ -51,7 +51,7 @@ const Header = ({navData, pageData}) => {
          <div className="row banner">
             <div className="banner-text">
                <h1 className="responsive-headline">I am {pageData.name}.</h1>
-               <h3 style={{color:'#fff', fontFamily:'sans-serif '}}>{pageData.description}
+               <h3>{pageData.description}
                </h3>
                <hr/>
                <ul className="social">

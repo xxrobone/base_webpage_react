@@ -6,7 +6,10 @@ import { pageData, navData } from './data/pageData';
 function App() {
   return (
     <div className="App">
-     <Header pageData={pageData} navData={navData} />
+      <Header pageData={pageData} navData={navData} />
+      <main>
+        
+      </main>
     </div>
   );
 }

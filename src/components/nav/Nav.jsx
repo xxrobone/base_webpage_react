@@ -4,13 +4,13 @@ import MenuBtn from '../menuBtn/MenuBtn';
 // styles 
 import './Nav.scss'
 
-function Nav(props) {
+function Nav({active, setActive, children}) {
   return (
     <nav className='nav'>
-    <ul className='menu'>
-    {props.children}              
+      <ul className={`menu ${active ? 'open' : ''}`}>
+    {children}              
       </ul>
-      <MenuBtn />
+      <MenuBtn active={active} setActive={setActive}/>
 </nav>
   );
 }

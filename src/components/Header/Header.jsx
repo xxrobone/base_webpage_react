@@ -1,5 +1,5 @@
 import React, {useState} from 'react';
-import office from '../../videos/office.mp4'
+import office from '../../videos/office.webm'
 
 // styles
 import './Header.scss'
@@ -25,7 +25,7 @@ const Header = ({navData, pageData}) => {
 
                     }}
                 >
-                    <source src={office} type="video/mp4" />
+                    <source src={office} type="video/webm" />
              </video>
              
              <Nav active={active} setActive={setActive} >

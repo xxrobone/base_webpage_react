@@ -154,3 +154,42 @@ export const pageData = {
     },
   ],
 };
+
+export const navData = [
+  {
+    title: 'home',
+    path: '/',
+    cls: 'nav_item',
+    id: 1,
+  },
+  {
+    title: 'about',
+    path: '/#about',
+    cls: 'nav_item',
+    id: 2,
+  },
+  {
+    title: 'resume',
+    path: '/#resume',
+    cls: 'nav_item',
+    id: 3,
+  },
+  {
+    title: 'projects',
+    path: '/#projects',
+    cls: 'nav_item',
+    id: 4,
+  },
+  {
+    title: 'testimonials',
+    path: '/#testimonials',
+    cls: 'nav_item',
+    id: 5,
+  },
+  {
+    title: 'contact',
+    path: '/#contact',
+    cls: 'nav_item',
+    id: 6,
+  },
+];

@@ -3,8 +3,10 @@ import office from '../../videos/office.mp4'
 
 // styles
 import './Header.scss'
+import Nav from '../nav/Nav';
+import NavItem from '../nav/NavItem';
 
-const Header = (props) => {
+const Header = ({navData, pageData}) => {
  
     return (
         <React.Fragment>
@@ -24,9 +26,16 @@ const Header = (props) => {
                     }}
                 >
                     <source src={office} type="video/mp4" />
-                </video>
+             </video>
+             
+             <Nav>
+                {navData.map(({title, cls, path, id}) => (
+                   <NavItem title={title} cls={cls} path={path} key={id} />
+                ))}
+               
+             </Nav>
          
-         <nav id="nav-wrap">
+        {/*  <nav id="nav-wrap">
             <a className="mobile-btn" href="#nav-wrap" title="Show navigation">Show navigation</a>
           <a className="mobile-btn" href="#" title="Hide navigation">Hide navigation</a>
             <ul id="nav" className="nav">
@@ -38,16 +47,16 @@ const Header = (props) => {
                <li><a className="smoothscroll" href="#contact">Contact</a></li>
             </ul>
          </nav>
-
+ */}
          <div className="row banner">
             <div className="banner-text">
-               <h1 className="responsive-headline">I am {props.pageData.name}.</h1>
-               <h3 style={{color:'#fff', fontFamily:'sans-serif '}}>{props.pageData.description}
+               <h1 className="responsive-headline">I am {pageData.name}.</h1>
+               <h3 style={{color:'#fff', fontFamily:'sans-serif '}}>{pageData.description}
                </h3>
                <hr/>
                <ul className="social">
                   {
-                    props.pageData.socialLinks && props.pageData.socialLinks.map(item =>{
+                    pageData.socialLinks && pageData.socialLinks.map(item =>{
                       return(
                               <li key={item.name}>
                                 <a href={item.url} target="_blank" rel='noopener noreferrer'><i className={item.className}></i></a>

@@ -1,18 +1,17 @@
-import React from 'react';
-import MenuBtn from '../menuBtn/MenuBtn';
+import React from 'react'
+import MenuBtn from '../menuBtn/MenuBtn'
 
-// styles 
+// styles
 import './Nav.scss'
 
-function Nav({active, setActive, children}) {
+export default function Nav({active, setActive, children}) {
   return (
     <nav className='nav'>
-      <ul className={`menu ${active ? 'open' : ''}`}>
-    {children}              
-      </ul>
-      <MenuBtn active={active} setActive={setActive}/>
+    <ul className={`menu ${active ? 'open' : ''}`}>
+  {children}              
+    </ul>
+    <MenuBtn active={active} setActive={setActive}/>
 </nav>
-  );
+);
 }
-
-export default Nav;
+  

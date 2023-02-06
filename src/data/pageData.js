@@ -188,7 +188,7 @@ export const navData = [
   },
   {
     title: 'contact',
-    path: '/#contact',
+    path: '/contact',
     cls: 'nav_item',
     id: 6,
   },

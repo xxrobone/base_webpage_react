@@ -1,14 +1,13 @@
 import React from 'react'
+import { Link } from 'react-router-dom'
 
 // styles
-import './Nav.scss'
+import './NavItem.scss'
 
-function NavItem({title, path, cls}) {
+export default function NavItem({title, path, cls, id}) {
   return (
-    <li className={cls}>
-        <a className="nav_link" href={path}>{title}</a>
+      <li className={cls} key={id}>
+          <Link className="nav_link" to={path}>{title}</Link>
     </li>
   )
 }
-
-export default NavItem

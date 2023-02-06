@@ -1,4 +1,48 @@
 
+/* Form wrapper for effects */
+
+.wrapper {
+    width: 80%;
+    height: 60%;
+    position: absolute;
+    top: 25vh;
+    left: 56px;
+    overflow: hidden;
+    z-index: 20;
+    }
+    
+    .wrapper.active {
+    -webkit-transition: all 0.2s ease;
+    -o-transition: all 0.2s ease;
+    transition: all 0.2s ease;
+    -webkit-box-shadow: 0 10px 20px rgba(0,0,0,0.19), 0 6px 6px rgba(0,0,0,0.17);
+            box-shadow: 0 10px 20px rgba(0,0,0,0.19), 0 6px 6px rgba(0,0,0,0.17);
+    }
+    
+    .inner {
+    float: right;  
+    padding: 1rem;
+    border-radius: 0px;
+    width: 250px;
+    height: 250px;
+    -webkit-clip-path: circle(10% at 90% 10%);
+          clip-path: circle(10% at 90% 10%);
+    cursor: pointer;
+    opacity: 0;
+    }
+    
+    .inner.active {
+    -webkit-clip-path: circle(100%);
+          clip-path: circle(100%);
+    background: var(--color-bg-dark-hover);
+    height: 100%;
+    width: 100%;
+    opacity: 1;
+    -webkit-transition: all 0.4s ease 0.6s, opacity 0.6s ease 0.5s;
+    -o-transition: all 0.4s ease 0.6s, opacity 0.6s ease 0.5s;
+    transition: all 0.4s ease 0.6s, opacity 0.6s ease 0.5s;
+    }
+
 .contact_form_wrapper {
     padding: 0rem;
     width: 0%;

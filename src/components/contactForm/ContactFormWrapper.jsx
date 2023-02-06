@@ -5,9 +5,9 @@ import './ContactFormWrapper.scss'
 
 const ContactFormWrapper = (props) => {
   return (
-    <div class="wrapper">
+    <div className="wrapper">
         
-        <div class="inner">
+        <div className="inner">
         </div>
       <div className='contact_form_wrapper'>
           {props.children}

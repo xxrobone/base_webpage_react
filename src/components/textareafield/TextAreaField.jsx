@@ -7,7 +7,7 @@ const TextAreaField = ({id, name, value, type, label, onChange}) => {
   return (
       <>
         <label>{label}</label>
-        <input 
+        <textarea 
         id={id}
         type={type}
         name={name}

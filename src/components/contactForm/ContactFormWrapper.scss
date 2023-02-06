@@ -23,18 +23,19 @@
     float: right;  
     padding: 1rem;
     border-radius: 0px;
-    width: 250px;
+    width: 80%;
     height: 250px;
     -webkit-clip-path: circle(10% at 90% 10%);
           clip-path: circle(10% at 90% 10%);
     cursor: pointer;
     opacity: 0;
+    opacity: 1;
     }
     
     .inner.active {
     -webkit-clip-path: circle(100%);
           clip-path: circle(100%);
-    background: var(--color-bg-dark-hover);
+    background: #383838;
     height: 100%;
     width: 100%;
     opacity: 1;
@@ -70,6 +71,14 @@
     backdrop-filter: blur(3px);
     cursor: pointer;
     overflow: hidden;
+
+    /* make it visible while working on the effects and implementation */
+    width: 90%;
+    height:95%;
+    top: 2vh;
+    opacity: 1;
+    z-index: 21;
+    
     }
     
     .contact_form_wrapper.active {

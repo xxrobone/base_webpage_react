@@ -1,9 +1,7 @@
-
-
 textarea {
     padding: 0.2rem;
     width: 100%;
-    height: 100px;
+    height: 150px;
     display: block;
     position: relative;
     font-size: 0.6rem;
@@ -14,14 +12,14 @@ textarea {
 }
 
 textarea:invalid {
-    border: 1px solid tomato;
+    border: 1px solid rgb(248, 145, 126);
   }
 
-  
+/*   
 label {
     font-size: 0.6rem;
     text-transform: capitalize;
-    color: white;
+    color: #121212;
     display: block;
     margin: 0.25rem 0;
-    }
+    } */

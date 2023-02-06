@@ -11,14 +11,15 @@ import TextAreaField from '../../components/textareafield/TextAreaField'
 
 
 const Contact = () => {
-    const [input, setInput] = useState({ username: "", email: "", msg: ""});
+    const [input, setInput] = useState({ username: "", email: "", message: ""});
 
     const users = [];
     
     
   const handleOnChange = (e) => {
     const {name, value} = e.target;
-    setInput({...input, [name]: value});
+      setInput({ ...input, [name]: value });
+      console.log({...input, [name]: value})
   }
 
   const handleSubmit = (e) => {
@@ -51,7 +52,7 @@ const Contact = () => {
                   id="msg"
                   type="textarea"
                   name="message"
-                  value={input.msg}
+                  value={input.message}
                   label="Message"
                   onChange={handleOnChange}
                   />

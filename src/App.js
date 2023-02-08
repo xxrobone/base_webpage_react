@@ -1,4 +1,4 @@
-import React, {useState} from 'react';
+import React, { useState } from 'react';
 import './App.css';
 import Header from './components/header/Header';
 import Footer from './components/footer/Footer';
@@ -10,15 +10,24 @@ import { Routes, Route } from 'react-router-dom';
 import Home from './pages/home/Home';
 import Contact from './pages/contact/Contact';
 
+// styles & animations
+import { motion as mt } from 'framer-motion';
+
 function App() {
-    const [active, setActive] = useState(false)
+  const [active, setActive] = useState(false);
   return (
-    <div className='App'>
-       <Header>
+    <mt.div className='App'>
+      <Header>
         <Logo />
         <Nav active={active} setActive={setActive}>
-          {navData.map(({ title, path, cls, id }) => (
-            <NavItem title={title} path={path} cls={cls} key={id} />
+          {navData.map(({ title, path, cls, id }, i) => (
+            <NavItem
+              title={title}
+              path={path}
+              cls={cls}
+              key={id}
+              i={i}
+            />
           ))}
         </Nav>
       </Header>
@@ -29,7 +38,7 @@ function App() {
         </Routes>
       </main>
       <Footer />
-    </div>
+    </mt.div>
   );
 }
 

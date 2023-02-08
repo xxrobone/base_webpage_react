@@ -5,7 +5,7 @@ import Footer from './components/footer/Footer';
 import Nav from './components/nav/Nav';
 import NavItem from './components/nav/NavItem';
 import Logo from './components/logo/Logo';
-import { navData } from './data/pageData';
+import { navData } from './assets/data/pageData';
 import { Routes, Route } from 'react-router-dom';
 import Home from './pages/home/Home';
 import Contact from './pages/contact/Contact';

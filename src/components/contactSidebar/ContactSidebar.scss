@@ -1,15 +1,20 @@
 /* SIDEBAR */
 
 .container {
-    position: absolute;
-    left: 1vw;
-    top: 25vh;
+    position: fixed;
+    left: 2vw;
+    top: 35vh;
     width: 46px;
     height: 60%;
     z-index: 50;
     display: block;   
     z-index: 19;  
     background: transparent;
+
+    
+@media (min-width: 768px) {
+  left: 1vw;
+}
     }
     
     .contact_sidebar {

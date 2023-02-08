@@ -1,13 +1,15 @@
-import React, {useState} from 'react'
-
-// styles
-import './Contact.scss'
+import React, { useState } from 'react'
 import ContactSidebar from '../../components/contactSidebar/ContactSidebar'
 import ContactFormWrapper from '../../components/contactForm/ContactFormWrapper'
 import ContactInfo from '../../components/contactForm/ContactInfo'
 import Form from '../../components/form/Form'
 import InputField from '../../components/inputfield/InputField'
 import TextAreaField from '../../components/textareafield/TextAreaField'
+
+// styles
+import './Contact.scss'
+import {motion as mt } from 'framer-motion'
+
 
 
 const Contact = () => {
@@ -27,7 +29,11 @@ const Contact = () => {
     users.push(input);
   }
   return (
-      <div className='contact'>
+    <mt.div className='contact'
+      initial={{ opacity: 0 }}
+      animate={{ opacity: 1 }}
+      transition={{ duration: 0.75, ease: "easeIn" }}
+    >
           <ContactSidebar />
           <ContactFormWrapper>
               <ContactInfo />
@@ -59,7 +65,7 @@ const Contact = () => {
               </Form>
           </ContactFormWrapper>
           
-    </div>
+    </mt.div>
   )
 }
 

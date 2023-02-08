@@ -9,7 +9,11 @@
     left: 56px;
     overflow: hidden;
     z-index: 20;
-    }
+
+    
+@media (min-width: 768px) {
+    left: 10%;
+}
     
     .wrapper.active {
     -webkit-transition: all 0.2s ease;
@@ -17,6 +21,8 @@
     transition: all 0.2s ease;
     -webkit-box-shadow: 0 10px 20px rgba(0,0,0,0.19), 0 6px 6px rgba(0,0,0,0.17);
             box-shadow: 0 10px 20px rgba(0,0,0,0.19), 0 6px 6px rgba(0,0,0,0.17);
+    }
+
     }
     
     .inner {
@@ -30,7 +36,6 @@
     cursor: pointer;
     opacity: 0;
     opacity: 1;
-    }
     
     .inner.active {
     -webkit-clip-path: circle(100%);
@@ -42,6 +47,7 @@
     -webkit-transition: all 0.4s ease 0.6s, opacity 0.6s ease 0.5s;
     -o-transition: all 0.4s ease 0.6s, opacity 0.6s ease 0.5s;
     transition: all 0.4s ease 0.6s, opacity 0.6s ease 0.5s;
+    }
     }
 
 .contact_form_wrapper {

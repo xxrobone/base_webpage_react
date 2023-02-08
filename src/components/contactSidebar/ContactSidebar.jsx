@@ -2,9 +2,15 @@ import React from 'react'
 
 // styles
 import './ContactSidebar.scss'
+import { motion as mt } from 'framer-motion'
+
 const ContactSidebar = () => {
   return (
-    <div className="container">
+      <mt.div className="container"
+      initial={{ opacity: 0, translateX: -200 }}
+      animate={{ opacity: 1, translateX: 0 }}
+          transition={{ duration: 0.75, ease: "easeIn" }}
+      >
         <div className="contact_sidebar">
             <div className="mail_btn">
                 <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -20,7 +26,7 @@ const ContactSidebar = () => {
         <div className="icons">
             <span className="icon first"></span>
         </div>
-    </div>
+    </mt.div>
   )
 }
 

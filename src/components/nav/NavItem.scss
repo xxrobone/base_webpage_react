@@ -50,11 +50,11 @@
 &::before {
     content: '';
     position: absolute;
-    bottom: -2px;
-    left: 0;           
+    bottom: 6px;
+    left: 10%;           
     width: 0%;
     height: 2%;
-    background-color: rgb(241, 91, 17);
+    background-color: #fafafa;
     z-index: -1;
 }
 }
@@ -73,7 +73,7 @@
 }
 
 .nav_link::before {
-    width: 100%;
+    width: 80%;
     cursor: pointer;
     transition: width 0.4s ease-in-out;
 }
